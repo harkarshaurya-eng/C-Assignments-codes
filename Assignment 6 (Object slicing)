@@ -1,0 +1,48 @@
+//Object Slicing sample code 
+
+
+#include<iostream>
+using namespace std;
+
+class Base
+{
+public:
+    int x;
+
+    Base()
+    {
+        x = 10;
+    }
+
+    void display()
+    {
+        cout << "Base x = " << x << endl;
+    }
+};
+
+class Derived : public Base
+{
+public:
+    int y;
+
+    Derived()
+    {
+        y = 20;
+    }
+
+    void show()
+    {
+        cout << "Derived y = " << y << endl;
+    }
+};
+
+int main()
+{
+    Derived d;
+
+    Base b = d;   // Object Slicing
+
+    b.display();
+
+    return 0;
+}
