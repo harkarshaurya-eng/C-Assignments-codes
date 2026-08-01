@@ -31,14 +31,8 @@ private:
 public:
     DLL() { head = NULL; }
 
-    ~DLL() {
-        Dnode* temp = head;
-        while (temp) {
-            Dnode* next = temp->next;
-            delete temp;
-            temp = next;
-        }
-    }
+
+
 
     /*
     Insert(value, pos)
